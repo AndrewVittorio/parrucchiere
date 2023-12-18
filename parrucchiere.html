@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="parrucchiere.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+<body style="margin: 0 auto;">
+<!--------------------------  Body ----------------------------------->
+<!------------------Inizio NAV BAR------------------------->
+<div container class="NavBarAll">
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+
+    <a href="#Modelli">Modelli</a>
+    <a href="#Testimonianza">Testimonianza</a>
+    <div class="dropdown">
+      <button class="dropbtn">Contatti
+        <i class="fa fa-caret-down"></i>
+      </button>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("myTopnav");
+    document.addEventListener("click", function (event) {
+        // Chiudi il menu se si fa clic altrove nella pagina
+        const isClickInsideNavbar = navbar.contains(event.target);
+        if (!isClickInsideNavbar && navbar.classList.contains("responsive")) {
+            navbar.classList.remove("responsive");
+        }
+    });
+});
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.classList.contains("responsive")) {
+        x.classList.remove("responsive");
+    } else {
+        x.classList.add("responsive");
+    }
+}
+</script>
+<!------------------Fine NAV BAR--------------------------------------------->
+
+<br><br>
+
+
+
+
+scrivi qua
+
+
+  
+
+
+<br><br>
+  
+<!------------------Inizio Footer------------------------->
+    <div class="footer">
+      <br><br>
+      <p>©Copyright 2023 AndVit | All Rights Reserved</p>
+      <br>
+    </div>
+<!------------------Fine Footer--------------------------->
+  
+<!--------------------------Fine Body ---------------------------------------------------------------------------->
+</body>
+</html>
