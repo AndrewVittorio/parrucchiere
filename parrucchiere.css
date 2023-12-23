@@ -115,6 +115,76 @@ body {
 
 
 
+body {
+    margin: 0px auto 0px;
+}
+#hero {
+    margin-top: -20px;
+    padding: 70px 50px;
+    background-image: url(giorgio-trovato-gI9rvJK61L8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#hero p {
+    margin-top: -10px;
+}
+#hero button {
+    border: 1px solid #7e7d7d;
+    background-color: #3f3f3f;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+#hero button a {
+    text-decoration: none;
+    color: #c9c9c9;
+}
+#head {
+    background-color: #cfbf9b;
+    margin-top: -20px;
+    text-align: center;
+    padding: 20px 0px;
+    color: #fffbeb;
+}
+#head p {
+    margin-bottom: 25px;
+}
+#head button a {
+    color: #fffbeb;
+    text-decoration: none;
+}
+#bio button {
+    padding: 10px 20px;
+    border: 1px solid #c9c9c9;
+    background-color: #7e7d7a;
+    border-radius: 20px;
+}
+#but {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+#service button {
+    padding: 0px;
+    border: 0;
+    margin: 30px 70px;
+    background-image: url(delfina-pan-8esvJeVUdes-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 270px;
+    width: 200px;
+}
+#service img {
+    width: 200px;
+}
+#service a {
+    padding: 10px 40px;
+    background-color: #c9c9c9a6;
+    font-size: 16px;
+}
+
+
 
 
 
