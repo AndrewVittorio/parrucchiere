@@ -9,49 +9,51 @@
 <body style="margin: 0 auto;">
 <!--------------------------  Body ----------------------------------->
 <!------------------Inizio NAV BAR------------------------->
-<div container class="NavBarAll">
+<div class="NavBarAll">
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-
-    <a href="#Modelli">Modelli</a>
-    <a href="#Testimonianza">Testimonianza</a>
-    <div class="dropdown">
-      <button class="dropbtn">Contatti
-        <i class="fa fa-caret-down"></i>
-      </button>
-  </div> 
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+    <a class="active"><img src="LogoAV.png" style="width: 15vh;"></a>
+      <a href="#Modelli">Modelli</a>
+      <a href="#Testimonianza">Testimonianza</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveMenu()">&#9776;</a>
+  </div>
 </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("myTopnav");
-    document.addEventListener("click", function (event) {
-        // Chiudi il menu se si fa clic altrove nella pagina
-        const isClickInsideNavbar = navbar.contains(event.target);
-        if (!isClickInsideNavbar && navbar.classList.contains("responsive")) {
-            navbar.classList.remove("responsive");
+
+
+  <div id="bio">
+    <center> 
+      <br id="home"><br><br><br><br><br>
+        <h1>Digitalizziamo la tua attività</h1>
+        <p>Progettiamo e creiamo da zero siti web, <br> qualsiasi sia la tua azienda o professione.</p>
+        <br><br><br><br><br><br>
+    </center>
+  </div>
+  </div>
+
+
+  <script>
+    function toggleResponsiveMenu() {
+        var navbar = document.getElementById("myTopnav");
+        if (navbar.className === "topnav") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "topnav";
         }
-    });
-});
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.classList.contains("responsive")) {
-        x.classList.remove("responsive");
-    } else {
-        x.classList.add("responsive");
     }
-}
-</script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        // Setup event listeners for menu items
+        const menuItems = document.querySelectorAll('#myTopnav a:not(.icon)');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                var navbar = document.getElementById("myTopnav");
+                if (navbar.className.includes("responsive")) {
+                    navbar.className = "topnav";
+                }
+            });
+        });
+    });
+  </script>
 <!------------------Fine NAV BAR--------------------------------------------->
 
 <br><br>
