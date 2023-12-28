@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body {
     margin: 0px auto 0px;
@@ -25,6 +26,7 @@ body {
   .flex {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     margin-right: 30px;    
 }
   .topnav a {
@@ -86,7 +88,7 @@ body {
   }
   @media screen and (max-width: 600px) {
     .flex a, .dropdown .dropbtn {
-      display: none;  
+      display: none; 
     }
     .topnav a.icon {
       float: right;
@@ -212,11 +214,31 @@ body {
 }
 #price h1 {
     font-style: italic;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 100;
     color: #e3e9de;
     padding-top: 20px;
 }
-
+#contatti {
+    background-color: #cfbf9b;
+    margin-bottom: -70px;
+}
+#contatti h1 {
+    font-style: italic;
+    font-family: 'Libre Baskerville', serif;
+    color: #e3e9de;
+    font-weight: 100;
+    padding-top: 60px;
+    margin-left: 40px;
+}
+#contatti p {
+  color: #525252;
+  text-align: right;
+  margin: 20px 150px;
+}
+#contatti img {
+  width: 400px;
+}
 
 
 
