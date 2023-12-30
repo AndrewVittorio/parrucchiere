@@ -114,6 +114,10 @@ body {
       width: 100%;
       text-align: left;
     }
+    .flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 /* -----------Fine NAV BAR css------------------------*/ 
 
@@ -126,25 +130,19 @@ body {
     margin: 0px auto 0px;
 }
 #hero {
-    margin-top: -20px;
-    padding: 70px 50px;
-    background-image: url(giorgio-trovato-gI9rvJK61L8-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Regola l'altezza secondo le tue esigenze */
+  overflow: hidden;
 }
-#hero p {
-    margin-top: -10px;
-}
-#hero button {
-    border: 1px solid #7e7d7d;
-    background-color: #3f3f3f;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-#hero button a {
-    text-decoration: none;
-    color: #c9c9c9;
+
+#hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
 }
 #head {
     background-color: #cfbf9b;
@@ -154,7 +152,7 @@ body {
     color: #fffbeb;
 }
 #head p {
-    margin-bottom: 25px;
+    margin: 0px 50px 25px 50px;
 }
 #head button a {
     color: #fffbeb;
@@ -179,10 +177,7 @@ body {
     background-image: url(delfina-pan-8esvJeVUdes-unsplash.jpg);
     background-position: center;
     background-size: cover;
-    height: 270px;
-    width: 200px;
-}
-#service img {
+    height: 250px;
     width: 200px;
 }
 #service a {
@@ -199,8 +194,7 @@ body {
 } 
 #li div {
     background-color: #e2e2e2a6;
-    margin-left: 50px;
-    margin-bottom: 20px;
+    margin:  0px 20px 20px 20px;
     padding: 10px 30px;
 }
 #li div p.prezzi {
@@ -232,22 +226,62 @@ body {
     margin-left: 40px;
 }
 #contatti p {
-  color: #525252;
-  text-align: right;
-  margin: 20px 150px;
+    color: #e3e3e3;
+    text-align: right;
+    margin: 100px 100px 0px 20px;
 }
 #contatti img {
-  width: 400px;
+    width: 400px;
+}
+#contatti img.one {
+    margin: 30px 0px 0px 50px;
+}
+#contatti img.two {
+    margin: -170px 0px 0px 250px;
+    padding-bottom: 50px;
+}
+#contatti img.three {
+  display: none;
+}
+#box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 
 
     /* -----------Inizio Footer css------------------------*/ 
     .footer {
-        background-color: black;
+        background-color: #666666;
         color: white;
         text-align: center;
         justify-content: center;
-        padding: 15px;
+        padding: 5px;
     }
-    /* -----------Fine Footer css--------------------------*/ 
+    /* -----------Fine Footer css--------------------------*/
+
+@media (max-width: 1200px) {
+  #contatti p {
+    margin: 0px 50px 0px 20px;
+    padding-bottom: 40px; 
+  }
+}
+@media (max-width: 1000px) {
+  #box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #contatti p {
+    margin: 40px 50px;
+  }
+}
+@media (max-width: 700px) {
+  #contatti img.one, .two {
+    display: none;
+  }
+  #contatti img.three {
+    display: block;
+    width: 95%;  
+  }
+}
