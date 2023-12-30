@@ -48,11 +48,14 @@
 
 <br><br>
 
-<div id="hero">
-    <img src="giorgio-trovato-gI9rvJK61L8-unsplash.jpg" alt="Immagine 1">
-    <img src="greg-trowman-jsuWg7IXx1k-unsplash.jpg" alt="Immagine 2">
-    <img src="adam-winger-VjRpkGtS55w-unsplash.jpg" alt="Immagine 3">
+<div id="hero" style="position: relative; display: inline-block;">
+    <img src="greg-trowman-jsuWg7IXx1k-unsplash.jpg" alt="Immagine 2" style="transition: transform 0.5s ease; display: block; max-width: 100%; cursor: pointer; opacity: 0.8; filter: brightness(35%);">
+    <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center; color: white; margin: 0;"><span style="font-size: 9vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i></span><br> Chi è il migliore programmatore?</p>
+
+    <img src="adam-winger-VjRpkGtS55w-unsplash.jpg" alt="Immagine 3" style="width: auto; height: auto; max-width: 100%; display: block; opacity: 0.8; filter: brightness(35%);">
+    <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center; color: white; margin: 0;"><span style="font-size: 9vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i></span><br> Er Torero Ma smettila, Juve 1 - 0 Roma</p>
 </div>
+
 
 
 
@@ -142,20 +145,25 @@
   
 <!--------------------------Fine Body ---------------------------------------------------------------------------->
 <script>
-    
-document.addEventListener("DOMContentLoaded", function() {
-    let immagini = document.querySelectorAll("#hero img");
-    let indiceCorrente = 0;
+    document.addEventListener("DOMContentLoaded", function() {
+        let immagini = document.querySelectorAll("#hero img");
+        let testi = document.querySelectorAll("#hero p");
+        let = document.querySelectorAll("#hero h1");
+        let indiceCorrente = 0;
 
-    immagini[indiceCorrente].style.opacity = 1;
-
-    setInterval(() => {
-        immagini[indiceCorrente].style.opacity = 0;
-        indiceCorrente = (indiceCorrente + 1) % immagini.length;
         immagini[indiceCorrente].style.opacity = 1;
-    }, 3000); // Cambia immagine ogni 3 secondi
-});
+        testi[indiceCorrente].style.opacity = 1;
+
+        setInterval(() => {
+            immagini[indiceCorrente].style.opacity = 0;
+            testi[indiceCorrente].style.opacity = 0;
+            indiceCorrente = (indiceCorrente + 1) % immagini.length;
+            immagini[indiceCorrente].style.opacity = 1;
+            testi[indiceCorrente].style.opacity = 1;
+        }, 3000); // Cambia immagine e testo ogni 3 secondi
+    });
 </script>
+    
 
 
 
