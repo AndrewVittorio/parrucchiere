@@ -129,6 +129,8 @@ body {
 body {
     margin: 0px auto 0px;
 }
+
+
 #hero {
   position: relative;
   width: 100%;
@@ -174,6 +176,9 @@ body {
 
 
 
+
+
+
 #head {
     background-color: #cfbf9b;
     margin-top: -20px;
@@ -188,6 +193,10 @@ body {
     color: #fffbeb;
     text-decoration: none;
 }
+
+
+
+
 #bio button {
     padding: 10px 20px;
     border: 1px solid #c9c9c9;
@@ -315,3 +324,9 @@ body {
     width: 95%;  
   }
 }
+
+
+
+
+
+
