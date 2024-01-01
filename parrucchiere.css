@@ -138,12 +138,42 @@ body {
 
 #hero img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Assicura che le immagini coprano l'intera area */
   opacity: 1;
   transition: opacity 1s ease-in-out;
-  object-fit: cover;
 }
+
+#hero p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  margin: 0;
+  max-width: 90%;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Media query per dispositivi con schermi fino a 600px */
+@media screen and (max-width: 600px) {
+  #hero {
+    height: 350px; /* Altezza modificata per dispositivi mobili */
+  }
+
+  #hero p {
+    font-size: 2vh; /* Adatta la dimensione del testo per schermi più piccoli */
+  }
+}
+
+
+
+
 #head {
     background-color: #cfbf9b;
     margin-top: -20px;
