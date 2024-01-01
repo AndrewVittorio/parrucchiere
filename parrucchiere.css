@@ -165,7 +165,7 @@ body {
 /* Media query per dispositivi con schermi fino a 600px */
 @media screen and (max-width: 600px) {
   #hero {
-    height: 350px; /* Altezza modificata per dispositivi mobili */
+    height: 450px; /* Altezza modificata per dispositivi mobili */
   }
 
   #hero p {
