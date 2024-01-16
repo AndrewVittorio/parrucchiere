@@ -129,56 +129,20 @@ body {
 body {
     margin: 0px auto 0px;
 }
-
-
 #hero {
   position: relative;
   width: 100%;
   height: 400px; /* Regola l'altezza secondo le tue esigenze */
   overflow: hidden;
 }
-
 #hero img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Assicura che le immagini coprano l'intera area */
   opacity: 1;
   transition: opacity 1s ease-in-out;
+  object-fit: cover;
 }
-
-#hero p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  margin: 0;
-  max-width: 90%;
-  overflow: hidden;
-  transition: opacity 1s ease-in-out;
-}
-
-/* Media query per dispositivi con schermi fino a 600px */
-@media screen and (max-width: 600px) {
-  #hero {
-    height: 450px; /* Altezza modificata per dispositivi mobili */
-  }
-
-  #hero p {
-    font-size: 2vh; /* Adatta la dimensione del testo per schermi più piccoli */
-  }
-}
-
-
-
-
-
-
-
 #head {
     background-color: #cfbf9b;
     margin-top: -20px;
@@ -193,15 +157,16 @@ body {
     color: #fffbeb;
     text-decoration: none;
 }
-
-
-
-
 #bio button {
     padding: 10px 20px;
     border: 1px solid #c9c9c9;
     background-color: #7e7d7a;
     border-radius: 20px;
+}
+#bio h2 {
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 100;
 }
 #but {
     display: flex;
@@ -216,13 +181,18 @@ body {
     background-image: url(delfina-pan-8esvJeVUdes-unsplash.jpg);
     background-position: center;
     background-size: cover;
-    height: 250px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
 }
 #service a {
-    padding: 12px 60px;
+    padding: 12px 110px;
     background-color: #c9c9c9a6;
     font-size: 16px;
+}
+#service h1 {
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 100;
 }
 #li{
     display: flex;
@@ -287,18 +257,36 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
 }
+#chisiamo {
+  color: #e3e3e3;
+  background-color: #3d3d3d;
+  background: linear-gradient(to top right, #1d1c1c, #686767);
+  padding: 10px 30px 60px 30px;
+}
+#chisiamo  h1, h3 {
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 100;
+}
+#flexbox {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
 
-    /* -----------Inizio Footer css------------------------*/ 
-    .footer {
-        background-color: #666666;
-        color: white;
-        text-align: center;
-        justify-content: center;
-        padding: 5px;
-    }
-    /* -----------Fine Footer css--------------------------*/
+/* -----------Inizio Footercss------------------------*/ 
+.footer {
+    background-color: #666666;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+}
+/* -----------Fine Footecss--------------------------*/
 
 @media (max-width: 1200px) {
   #contatti p {
@@ -324,9 +312,9 @@ body {
     width: 95%;  
   }
 }
-
-
-
-
-
-
+@media (max-width: 425px) {
+  #flexbox {
+    text-align: left;
+    display: inline;
+  }
+}
