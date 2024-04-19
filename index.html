@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="parrucchiere.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-</head>
     <style>
-        #hero img,
+        #hero img, #hero p {
+            transition: opacity 1s ease; /* Imposta una transizione fluida */
+            position: absolute; /* Sovrappone tutti gli elementi in modo assoluto */
+            top: 0; left: 0; width: 100%; /* Completa la copertura del div 'hero' */
+            text-align: center; color: white; /* Centratura testo e colore */
+            opacity: 0; /* Imposta opacità iniziale a 0 per tutti gli elementi */
+        }
         #hero p {
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translate(-50%, -50%); /* Centra il testo */
+            top: 50%; left: 50%; /* Posiziona al centro */
+        }
+        #hero img:first-child, #hero p:first-child {
+            opacity: 1; /* Mostra solo il primo elemento all'inizio */
         }
     </style>
 </head>
@@ -51,31 +60,23 @@
 </script>
 <!------------------Fine NAV BAR--------------------------------------------->
 <br><br>
-<div id="hero" style="position: relative; display: inline-block;">
-    <img src="greg-trowman-jsuWg7IXx1k-unsplash.jpg" style="transition: transform 0.5s ease; display: block; max-width: 100%; cursor: pointer; opacity: 0.8; filter: brightness(35%);">
-    <p style="position: absolute; top: 50%; left: 50%; transition: transform 0.5s ease; transform: translate(-50%, -50%);text-align: center; color: white; margin: 0;"><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i></span><br>aaaaaaaaaaaaaaaaaaaaaa</p>
-    <img src="adam-winger-VjRpkGtS55w-unsplash.jpg"  style="transition: transform 0.5s ease; display: block; max-width: 100%; cursor: pointer; opacity: 0.8; filter: brightness(35%);">
-    <p style="position: absolute; top: 50%; left: 50%; transition: transform 0.5s ease; transform: translate(-50%, -50%);text-align: center; color: white; margin: 0;"><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofi</i></span><br> bbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+<div id="hero" style="position: relative; display: inline-block; height: 400px;">
+    <img src="greg-trowman-jsuWg7IXx1k-unsplash.jpg">
+    <p><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i></span><br>aaaaaaaaaaaaaaaaaaaaaa</p>
+    <img src="adam-winger-VjRpkGtS55w-unsplash.jpg">
+    <p><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofi</i></span><br>bbbbbbbbbbbbbbbbbbbbbbbb</p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let immagini = document.querySelectorAll("#hero img");
-    let testi = document.querySelectorAll("#hero p");
-    let indiceCorrente = 0;
-
-    // Inizializza l'opacità per la prima immagine e il primo testo
-    immagini[indiceCorrente].style.opacity = 1;
-    testi[indiceCorrente].style.opacity = 1;
+    let elements = document.querySelectorAll("#hero img, #hero p");
+    let currentIndex = 0;
 
     setInterval(() => {
-        immagini[indiceCorrente].style.opacity = 0;
-        testi[indiceCorrente].style.opacity = 0; // Nasconde il testo corrente
-
-        indiceCorrente = (indiceCorrente + 1) % immagini.length; // Avanza al prossimo indice
-
-        immagini[indiceCorrente].style.opacity = 1;
-        testi[indiceCorrente].style.opacity = 1; // Mostra il nuovo testo
-    }, 3000); // Cambia immagine e testo ogni 3 secondi
+        const nextIndex = (currentIndex + 1) % elements.length; // Calcola il prossimo indice
+        elements[currentIndex].style.opacity = 0; // Nasconde l'elemento corrente
+        elements[nextIndex].style.opacity = 1; // Mostra il prossimo elemento
+        currentIndex = nextIndex; // Aggiorna l'indice corrente
+    }, 3000); // Intervallo di 3 secondi
 });
 </script>
 
