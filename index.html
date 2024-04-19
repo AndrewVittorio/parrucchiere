@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <style>
         #hero img, #hero p {
-            transition: opacity 1s ease; /* Imposta una transizione fluida */
+            transition: opacity 1s ease; /* Transizione fluida dell'opacità */
             position: absolute; /* Sovrappone tutti gli elementi in modo assoluto */
-            top: 0; left: 0; width: 100%; /* Completa la copertura del div 'hero' */
-            text-align: center; color: white; /* Centratura testo e colore */
+            top: 0; left: 0; width: 100%; height: 100%; /* Completa la copertura del div 'hero' */
             opacity: 0; /* Imposta opacità iniziale a 0 per tutti gli elementi */
         }
+        #hero img {
+            filter: brightness(65%); /* Oscura le immagini per un migliore contrasto del testo */
+        }
         #hero p {
-            transform: translate(-50%, -50%); /* Centra il testo */
-            top: 50%; left: 50%; /* Posiziona al centro */
+            color: white; /* Colore del testo */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
         #hero img:first-child, #hero p:first-child {
             opacity: 1; /* Mostra solo il primo elemento all'inizio */
@@ -23,18 +29,16 @@
     </style>
 </head>
 <body style="margin: 0 auto;">
-<!--------------------------  Body ----------------------------------->
-<!------------------Inizio NAV BAR------------------------->
 <div class="NavBarAll">
-  <div class="topnav" id="myTopnav">
-      <a class="active"><img src="LogoAV.png" style="width: 15vh;"></a>
-      <div class="flex">
-        <a href="#price">Listino prezzi</a>
-        <a href="#service">Servizi</a>
-        <a href="#bio">Chi siamo</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveMenu()">&#9776;</a>
-  </div>
+    <div class="topnav" id="myTopnav">
+        <a class="active"><img src="LogoAV.png" style="width: 15vh;"></a>
+        <div class="flex">
+            <a href="#price">Listino prezzi</a>
+            <a href="#service">Servizi</a>
+            <a href="#bio">Chi siamo</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveMenu()">&#9776;</a>
+    </div>
 </div>
 <script>
     function toggleResponsiveMenu() {
@@ -58,13 +62,12 @@
         });
     });
 </script>
-<!------------------Fine NAV BAR--------------------------------------------->
 <br><br>
 <div id="hero" style="position: relative; display: inline-block; height: 400px;">
     <img src="greg-trowman-jsuWg7IXx1k-unsplash.jpg">
-    <p><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i></span><br>aaaaaaaaaaaaaaaaaaaaaa</p>
+    <p style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofia</i><br>aaaaaaaaaaaaaaaaaaaaaa</p>
     <img src="adam-winger-VjRpkGtS55w-unsplash.jpg">
-    <p><span style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofi</i></span><br>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+    <p style="font-size: 7vh; font-family: Georgia, 'Times New Roman', Times, serif;"><i>Amate di Sofi</i><br>bbbbbbbbbbbbbbbbbbbbbbbb</p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
